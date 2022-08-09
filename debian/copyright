@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: cling
+Source: https://root.cern/cling/
+
+Files: *
+Copyright: 2007-2022 by the Cling Authors
+License: LGPL-2+
+Comment: Developed by The ROOT Team; CERN and Fermilab
+
+Files: debian/*
+Copyright: 2021-2022 Dimitry Ishenko <dimitry.ishenko@gmail.com>
+License: GPL-2+

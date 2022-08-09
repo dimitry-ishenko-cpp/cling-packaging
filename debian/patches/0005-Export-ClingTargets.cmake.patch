@@ -1,0 +1,25 @@
+From 8817a6d40eabbeca5d91a168d24a6155fba1ed6f Mon Sep 17 00:00:00 2001
+From: Dimitry Ishenko <dimitry.ishenko@gmail.com>
+Date: Wed, 20 Oct 2021 11:03:59 -0400
+Subject: [PATCH 05/22] Export ClingTargets.cmake
+
+---
+ cmake/modules/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmake/modules/CMakeLists.txt b/cmake/modules/CMakeLists.txt
+index 1e31e451..5b0f1374 100644
+--- a/cmake/modules/CMakeLists.txt
++++ b/cmake/modules/CMakeLists.txt
+@@ -53,7 +53,7 @@ set(CLING_CONFIG_CMAKE_DIR)
+ set(CLING_CONFIG_EXPORTS_FILE)
+ 
+ if (NOT LLVM_INSTALL_TOOLCHAIN_ONLY)
+-  get_property(cling_has_exports GLOBAL PROPERTY CLING_HAS_EXPORTS)
++  get_property(cling_has_exports GLOBAL PROPERTY CLING_EXPORTS)
+   if(cling_has_exports)
+     install(EXPORT ClingTargets DESTINATION ${CLING_INSTALL_PACKAGE_DIR}
+             COMPONENT cling-cmake-exports)
+-- 
+2.34.1
+

@@ -1,0 +1,29 @@
+From c2fbacf9bad97bd8207f2eae86a57874ae3f1d78 Mon Sep 17 00:00:00 2001
+From: Dimitry Ishenko <dimitry.ishenko@gmail.com>
+Date: Tue, 19 Oct 2021 22:13:05 -0400
+Subject: [PATCH 02/22] Disable plugins, Jupyter kernel and demo
+
+---
+ tools/CMakeLists.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/tools/CMakeLists.txt b/tools/CMakeLists.txt
+index 67881875..107eef74 100644
+--- a/tools/CMakeLists.txt
++++ b/tools/CMakeLists.txt
+@@ -9,9 +9,9 @@
+ if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/../lib/UserInterface/textinput
+    OR CLING_INCLUDE_TESTS)
+   add_subdirectory(driver)
+-  add_subdirectory(Jupyter)
++  #add_subdirectory(Jupyter)
+   add_subdirectory(libcling)
+-  add_subdirectory(demo)
++  #add_subdirectory(demo)
+ endif()
+ 
+-add_subdirectory(plugins)
++#add_subdirectory(plugins)
+-- 
+2.34.1
+
