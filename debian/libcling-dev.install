@@ -1,3 +1,3 @@
-usr/lib/cmake/cling/*
-usr/lib/libcling*.a
-usr/lib/libcling*.so
+usr/lib/${DEB_HOST_MULTIARCH}/cmake/cling/*
+usr/lib/${DEB_HOST_MULTIARCH}/libcling*.a
+usr/lib/${DEB_HOST_MULTIARCH}/libcling*.so
