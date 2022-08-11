@@ -3,3 +3,4 @@
 0003-Enable-cling-to-be-built-against-shared-libclang.patch
 0004-Don-t-check-compatibility.patch
 0005-Export-ClingTargets.cmake.patch
+0006-Fix-install-dir.patch

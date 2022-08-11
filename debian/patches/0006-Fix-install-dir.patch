@@ -1,0 +1,32 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -316,6 +316,7 @@ if (APPLE)
+ endif ()
+ 
+ include(CMakeParseArguments)
++include(GNUInstallDirs)
+ 
+ macro(add_cling_subdirectory name)
+   add_llvm_subdirectory(CLING TOOL ${name})
+@@ -440,8 +441,8 @@ macro(add_cling_library name)
+       install(TARGETS ${name}
+         COMPONENT ${name}
+         EXPORT ClingTargets
+-        LIBRARY DESTINATION lib${LLVM_LIBDIR_SUFFIX}
+-        ARCHIVE DESTINATION lib${LLVM_LIBDIR_SUFFIX}
++        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
++        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+         RUNTIME DESTINATION bin)
+ 
+       if (${ARG_SHARED} AND NOT CMAKE_CONFIGURATION_TYPES)
+--- a/cmake/modules/CMakeLists.txt
++++ b/cmake/modules/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ # Generate a list of CMake library targets so that other CMake projects can
+ # link against them. LLVM calls its version of this file LLVMExports.cmake, but
+ # the usual CMake convention seems to be ${Project}Targets.cmake.
+-set(CLING_INSTALL_PACKAGE_DIR lib${LLVM_LIBDIR_SUFFIX}/cmake/cling)
++set(CLING_INSTALL_PACKAGE_DIR ${CMAKE_INSTALL_LIBDIR}/cmake/cling)
+ set(cling_cmake_builddir "${CMAKE_BINARY_DIR}/${CLING_INSTALL_PACKAGE_DIR}")
+ 
+ # Keep this in sync with llvm/cmake/CMakeLists.txt!
