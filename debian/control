@@ -15,7 +15,7 @@ Rules-Requires-Root: no
 
 Package: cling-common
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},
+Depends: ${misc:Depends},
  libclang-common-9-dev (>> 2:9~)
 Description: Interactive C++ interpreter
  Cling is an interactive C++ interpreter, built on the top of LLVM and Clang
@@ -68,7 +68,7 @@ Description: Interactive C++ interpreter
 Package: libcling-dev
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},
+Depends: ${misc:Depends},
  libcling (= ${binary:Version})
 Description: Interactive C++ interpreter
  Cling is an interactive C++ interpreter, built on the top of LLVM and Clang
