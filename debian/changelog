@@ -1,4 +1,4 @@
-cling (0.9-2ppa3) unstable; urgency=medium
+cling (0.9-2ppa3~ubuntu22.04) jammy; urgency=medium
 
   * control: remove unused Depends vars
   * Revert "Don't install ClingTargets-none.cmake"
