@@ -1,3 +1,9 @@
+cling (0.9-2ppa4) unstable; urgency=medium
+
+  * Set build type to Release
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Sun, 14 Aug 2022 20:39:27 -0400
+
 cling (0.9-2ppa3) unstable; urgency=medium
 
   * control: remove unused Depends vars
