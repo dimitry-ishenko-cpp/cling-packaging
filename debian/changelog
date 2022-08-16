@@ -1,4 +1,4 @@
-cling (0.9-2ppa5) unstable; urgency=medium
+cling (0.9-2ppa5~ubuntu22.04) jammy; urgency=medium
 
   * Add cliche script and man page
 
