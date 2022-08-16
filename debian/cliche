@@ -1,0 +1,22 @@
+#!/bin/bash
+
+escaped() {
+    local p="$1"
+    p=${p//$'\\'/\\\\} p=${p//$'\"'/\\\"}
+    p=${p//$'\a'/\\a} p=${p//$'\b'/\\b} p=${p//$'\f'/\\f}
+    p=${p//$'\n'/\\n} p=${p//$'\r'/\\r} p=${p//$'\t'/\\t} p=${p//$'\v'/\\v}
+    echo "\"$p\""
+}
+
+size=$#
+if ((size > 0)); then
+    script="$1"
+    shift
+
+    args=$(escaped "$script")
+    for arg in "$@"; do args+=", $(escaped "$arg")"; done
+else
+    script= args=
+fi
+
+exec cling -std=c++17 -D"getargs()=std::array<const char*, $size>{ $args }" "$script"
