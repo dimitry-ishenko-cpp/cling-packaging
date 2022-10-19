@@ -1,4 +1,4 @@
-cling (1.0-0ppa1) unstable; urgency=medium
+cling (1.0-0ppa1~ubuntu22.04) jammy; urgency=medium
 
   * Update patches for cling 1.0
   * Update deps to patched LLVM/Clang 13 for cling 1.0
