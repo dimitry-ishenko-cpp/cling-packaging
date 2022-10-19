@@ -1,15 +1,16 @@
 # Debian Packaging for Cling
 
 This is Debian packaging repository for the [Cling](https://root.cern/cling/)
-interactive C++ interpreter. Cling requires patched versions of [LLVM](https://llvm.org/) and
+interactive C++ interpreter. Cling requires patched version of
 [Clang](https://clang.llvm.org/) maintained by the [ROOT
 Project](https://root.cern/) here:
 
-  * LLVM:  http://root.cern/git/llvm.git/
-  * Clang: http://root.cern/git/clang.git/
+  * LLVM:  https://github.com/vgvassilev/llvm/tree/cling-patches-llvm13
+  * Clang: https://github.com/vgvassilev/clang/tree/cling-patches-llvm13
 
-Debian packaging for them can be found here: https://salsa.debian.org/dimitry-ishenko/llvm-clang-9
-<br>or here: https://github.com/dimitry-ishenko-cpp/llvm-clang-9.
+Debian packaging for them can be found here:
+https://salsa.debian.org/dimitry-ishenko/llvm-toolchain-13 <br>or here:
+https://github.com/dimitry-ishenko-cpp/llvm-toolchain-13
 
 Precompiled Debian package for Cling along with the above LLVM/Clang libraries
 can be installed from

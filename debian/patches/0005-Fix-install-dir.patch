@@ -1,6 +1,18 @@
+From 9097ffa84374926cd9c6ab99938454752b4a64c8 Mon Sep 17 00:00:00 2001
+From: Dimitry Ishenko <dimitry.ishenko@gmail.com>
+Date: Tue, 18 Oct 2022 15:08:23 -0400
+Subject: [PATCH 5/5] Fix install dir
+
+---
+ CMakeLists.txt               | 5 +++--
+ cmake/modules/CMakeLists.txt | 2 +-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3d559f1d..5d61542f 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -316,6 +316,7 @@ if (APPLE)
+@@ -318,6 +318,7 @@ if (APPLE)
  endif ()
  
  include(CMakeParseArguments)
@@ -8,7 +20,7 @@
  
  macro(add_cling_subdirectory name)
    add_llvm_subdirectory(CLING TOOL ${name})
-@@ -440,8 +441,8 @@ macro(add_cling_library name)
+@@ -445,8 +446,8 @@ macro(add_cling_library name)
        install(TARGETS ${name}
          COMPONENT ${name}
          EXPORT ClingTargets
@@ -19,6 +31,8 @@
          RUNTIME DESTINATION bin)
  
        if (${ARG_SHARED} AND NOT CMAKE_CONFIGURATION_TYPES)
+diff --git a/cmake/modules/CMakeLists.txt b/cmake/modules/CMakeLists.txt
+index 0d39dc17..cbbda2c1 100644
 --- a/cmake/modules/CMakeLists.txt
 +++ b/cmake/modules/CMakeLists.txt
 @@ -1,7 +1,7 @@
@@ -30,3 +44,6 @@
  set(cling_cmake_builddir "${CMAKE_BINARY_DIR}/${CLING_INSTALL_PACKAGE_DIR}")
  
  # Keep this in sync with llvm/cmake/CMakeLists.txt!
+-- 
+2.34.1
+

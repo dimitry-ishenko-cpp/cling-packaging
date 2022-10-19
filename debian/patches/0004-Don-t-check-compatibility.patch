@@ -1,17 +1,17 @@
-From 77c15d8a4f76d6e854cb3cdad7b7be4f3b378279 Mon Sep 17 00:00:00 2001
+From d5f49f1328e5c610b7fe46e753bc536d611e879d Mon Sep 17 00:00:00 2001
 From: Dimitry Ishenko <dimitry.ishenko@gmail.com>
-Date: Wed, 20 Oct 2021 00:34:40 -0400
-Subject: [PATCH 04/22] Don't check compatibility
+Date: Tue, 18 Oct 2022 15:03:10 -0400
+Subject: [PATCH 4/5] Don't check compatibility
 
 ---
  lib/Interpreter/CIFactory.cpp | 32 --------------------------------
  1 file changed, 32 deletions(-)
 
 diff --git a/lib/Interpreter/CIFactory.cpp b/lib/Interpreter/CIFactory.cpp
-index a546404b..e0b1a367 100644
+index 6f87cfa5..9fc484f3 100644
 --- a/lib/Interpreter/CIFactory.cpp
 +++ b/lib/Interpreter/CIFactory.cpp
-@@ -472,36 +472,6 @@ namespace {
+@@ -473,36 +473,6 @@ namespace {
      Opts.CharIsSigned = std::numeric_limits<char>::is_signed;
    }
  
@@ -48,7 +48,7 @@ index a546404b..e0b1a367 100644
    /// \brief Retrieves the clang CC1 specific flags out of the compilation's
    /// jobs. Returns NULL on error.
    static const llvm::opt::ArgStringList*
-@@ -1230,8 +1200,6 @@ static void stringifyPreprocSetting(PreprocessorOptions& PPOpts,
+@@ -1239,8 +1209,6 @@ namespace {
      // Create an instance builder, passing the LLVMDir and arguments.
      //
  

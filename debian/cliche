@@ -19,4 +19,4 @@ else
     script= args=
 fi
 
-exec cling -std=c++17 -D"getargs()=std::array<const char*, $size>{ $args }" "$script"
+exec cling -std=c++20 -D"getargs()=std::array<const char*, $size>{ $args }" "$script"
