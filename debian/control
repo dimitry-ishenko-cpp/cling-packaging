@@ -2,9 +2,10 @@ Source: cling
 Section: devel
 Priority: optional
 Maintainer: Dimitry Ishenko <dimitry.ishenko@gmail.com>
-Build-Depends: debhelper-compat (= 13),
+Build-Depends: debhelper-compat (= 12),
  cmake,
  clang-tools-9 (>> 2:9~),
+ dh-exec,
  libclang-9-dev (>> 2:9~),
  libclang-cpp9-dev (>> 2:9~),
  llvm-9-dev (>> 2:9~),
