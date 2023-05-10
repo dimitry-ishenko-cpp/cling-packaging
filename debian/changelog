@@ -1,4 +1,4 @@
-cling (0.9-2ppa6) unstable; urgency=medium
+cling (0.9-2ppa6~ubuntu20.04) focal; urgency=medium
 
   * control: switch to debhelper (= 12)
 
