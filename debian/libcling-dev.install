@@ -1,3 +1,4 @@
+#!/usr/bin/dh-exec
 usr/lib/${DEB_HOST_MULTIARCH}/cmake/cling/*
 usr/lib/${DEB_HOST_MULTIARCH}/libcling*.a
 usr/lib/${DEB_HOST_MULTIARCH}/libcling*.so
